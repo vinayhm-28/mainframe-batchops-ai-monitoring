@@ -1,6 +1,6 @@
 # 🖥️ Mainframe BatchOps AI Monitoring
 
-[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://YOUR_USERNAME.github.io/mainframe-batchops-ai-monitoring)
+[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://vinayhm-28.github.io/mainframe-batchops-ai-monitoring)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 > AI-powered monitoring, anomaly detection, and predictive analytics for enterprise mainframe batch operations.
