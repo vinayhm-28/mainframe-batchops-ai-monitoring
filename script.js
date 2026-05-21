@@ -1,4 +1,4 @@
-// ===== BatchOps AI Monitoring - Interactive Dashboard =====
+// ===== Accenture BatchOps AI Monitoring - Interactive Dashboard =====
 
 document.addEventListener('DOMContentLoaded', () => {
     initCounters();
@@ -43,8 +43,13 @@ function initNavbar() {
     const links = document.querySelector('.nav-links');
 
     window.addEventListener('scroll', () => {
-        navbar.style.background = window.scrollY > 50
-            ? 'rgba(10, 14, 26, 0.95)' : 'rgba(10, 14, 26, 0.85)';
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(10, 10, 15, 0.96)';
+            navbar.style.borderBottomColor = 'rgba(161, 0, 255, 0.15)';
+        } else {
+            navbar.style.background = 'rgba(10, 10, 15, 0.88)';
+            navbar.style.borderBottomColor = 'rgba(161, 0, 255, 0.12)';
+        }
     });
 
     if (toggle) {
@@ -56,19 +61,23 @@ function initNavbar() {
 
 // ===== SCROLL ANIMATIONS =====
 function initScrollAnimations() {
-    const elements = document.querySelectorAll('.feature-card, .usecase-card, .doc-card, .arch-layer, .dash-card');
+    const elements = document.querySelectorAll(
+        '.feature-card, .usecase-card, .doc-card, .arch-layer, .dash-card'
+    );
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 80);
             }
         });
     }, { threshold: 0.1 });
     elements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease';
+        el.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
         observer.observe(el);
     });
 }
@@ -105,10 +114,24 @@ function updateHealthMetrics() {
 }
 
 function updateJobCounts() {
-    setVal('.running-count', rand(42, 68));
-    setVal('.completed-count', rand(1200, 1580));
-    setVal('.waiting-count', rand(15, 35));
-    setVal('.abended-count', rand(0, 4));
+    animateValue('.running-count', rand(42, 68));
+    animateValue('.completed-count', rand(1200, 1580));
+    animateValue('.waiting-count', rand(15, 35));
+    animateValue('.abended-count', rand(0, 4));
+}
+
+function animateValue(sel, newVal) {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    const current = parseInt(el.textContent) || 0;
+    const diff = newVal - current;
+    const steps = 20;
+    let step = 0;
+    const interval = setInterval(() => {
+        step++;
+        el.textContent = Math.round(current + (diff * step / steps));
+        if (step >= steps) clearInterval(interval);
+    }, 30);
 }
 
 function populateAIInsights() {
@@ -130,12 +153,12 @@ function populateAIInsights() {
 
 function populateJobStream() {
     const jobs = [
-        { name: 'GLPROD01', pct: 100, color: '#10b981' },
-        { name: 'GLPROD12', pct: 87, color: '#3b82f6' },
-        { name: 'ACCTG045', pct: 64, color: '#06b6d4' },
-        { name: 'RPTGEN03', pct: 42, color: '#8b5cf6' },
-        { name: 'EODSETL1', pct: 23, color: '#f59e0b' },
-        { name: 'BKUP0001', pct: 8, color: '#ef4444' },
+        { name: 'GLPROD01', pct: 100, color: '#00c853' },
+        { name: 'GLPROD12', pct: 87, color: '#A100FF' },
+        { name: 'ACCTG045', pct: 64, color: '#C74FFF' },
+        { name: 'RPTGEN03', pct: 42, color: '#7B00CC' },
+        { name: 'EODSETL1', pct: 23, color: '#ffc107' },
+        { name: 'BKUP0001', pct: 8, color: '#ff1744' },
     ];
     const container = document.getElementById('jobStream');
     if (!container) return;
@@ -202,6 +225,7 @@ function addConsoleLine() {
         { msg: `*AI INFO* BATCH THROUGHPUT NOMINAL - ${rand(45,68)} JOBS/MIN`, type: '' },
         { msg: `*WARNING* DASD VOL SYS0${rand(1,9)}${rand(1,9)} UTILIZATION AT ${rand(80,95)}%`, type: 'warning' },
         { msg: `$HASP373 BKUP000${rand(1,5)} STARTED - INIT ${rand(1,15)} - CLASS B`, type: '' },
+        { msg: `*ACCENTURE AI* PREDICTIVE MODEL UPDATE CYCLE COMPLETE`, type: '' },
     ];
     const m = msgs[rand(0, msgs.length - 1)];
     const line = document.createElement('div');
@@ -215,4 +239,3 @@ function addConsoleLine() {
 
 // ===== HELPERS =====
 function rand(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-function setVal(sel, val) { const el = document.querySelector(sel); if (el) el.textContent = val; }
