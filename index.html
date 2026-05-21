@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainframe BatchOps AI Monitoring</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <i class="fas fa-microchip"></i>
+            <span>BatchOps<span class="highlight">AI</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#usecases">Use Cases</a></li>
+            <li><a href="#docs">Docs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-bg-animation">
+        <div class="grid-lines"></div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class="fas fa-robot"></i> AI-Powered Mainframe Operations
+        </div>
+        <h1>Mainframe BatchOps<br><span class="gradient-text">AI Monitoring</span></h1>
+        <p class="hero-subtitle">
+            Intelligent monitoring, anomaly detection, and predictive analytics
+            for enterprise mainframe batch operations. Powered by machine learning
+            and real-time telemetry.
+        </p>
+        <div class="hero-buttons">
+            <a href="#dashboard" class="btn btn-primary">
+                <i class="fas fa-chart-line"></i> Live Dashboard
+            </a>
+            <a href="#docs" class="btn btn-secondary">
+                <i class="fas fa-book"></i> Documentation
+            </a>
+            <a href="https://github.com/YOUR_USERNAME/mainframe-batchops-ai-monitoring" class="btn btn-outline">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number" data-target="99.7">0</span><span class="stat-suffix">%</span>
+                <span class="stat-label">Uptime Accuracy</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="85">0</span><span class="stat-suffix">%</span>
+                <span class="stat-label">Anomaly Detection</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="60">0</span><span class="stat-suffix">%</span>
+                <span class="stat-label">Faster MTTR</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+                <span class="stat-label">Real-Time Monitoring</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-cogs"></i> Capabilities</span>
+            <h2>Intelligent Features</h2>
+            <p>Enterprise-grade AI monitoring built for z/OS mainframe batch workloads</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI Anomaly Detection</h3>
+                <p>Machine learning models trained on historical batch execution patterns to detect deviations in job runtime, resource usage, and completion rates.</p>
+                <ul class="feature-list">
+                    <li>Runtime deviation alerts</li>
+                    <li>CPU/Memory spike detection</li>
+                    <li>Abend pattern recognition</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                <h3>Predictive SLA Tracking</h3>
+                <p>Forecast batch job completion times and proactively alert when SLAs are at risk before they breach.</p>
+                <ul class="feature-list">
+                    <li>SLA breach prediction</li>
+                    <li>Critical path analysis</li>
+                    <li>Dynamic ETA calculation</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Job Stream Intelligence</h3>
+                <p>Visualize and analyze complex job dependencies across ESP, Control-M, and native JES2 schedulers.</p>
+                <ul class="feature-list">
+                    <li>Dependency graph mapping</li>
+                    <li>Bottleneck identification</li>
+                    <li>Cross-scheduler correlation</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Console & WTO Monitoring</h3>
+                <p>AI-powered analysis of console messages, WTOs, and system log entries for early problem detection.</p>
+                <ul class="feature-list">
+                    <li>Message pattern analysis</li>
+                    <li>Severity classification</li>
+                    <li>Auto-response suggestions</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+                <h3>Resource Optimization</h3>
+                <p>Analyze DASD, tape, CPU, and initiator usage to recommend optimal batch window configurations.</p>
+                <ul class="feature-list">
+                    <li>Initiator optimization</li>
+                    <li>DASD contention analysis</li>
+                    <li>Batch window tuning</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bell"></i></div>
+                <h3>Smart Alerting</h3>
+                <p>Context-aware alerting with noise reduction, deduplication, and intelligent routing to the right on-call team.</p>
+                <ul class="feature-list">
+                    <li>Alert fatigue reduction</li>
+                    <li>Escalation automation</li>
+                    <li>Shift-aware routing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Live Dashboard Section -->
+<section class="dashboard" id="dashboard">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-tv"></i> Real-Time</span>
+            <h2>Live Monitoring Dashboard</h2>
+            <p>Simulated real-time batch operations monitoring view</p>
+        </div>
+        <div class="dashboard-grid">
+            <!-- System Health Card -->
+            <div class="dash-card health-card">
+                <div class="dash-card-header">
+                    <h4><i class="fas fa-heartbeat"></i> System Health</h4>
+                    <span class="status-badge status-healthy">HEALTHY</span>
+                </div>
+                <div class="health-metrics">
+                    <div class="health-item">
+                        <span class="health-label">LPAR CPU</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill cpu-bar" style="width: 0%"></div>
+                        </div>
+                        <span class="health-value cpu-val">0%</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Memory</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill mem-bar" style="width: 0%"></div>
+                        </div>
+                        <span class="health-value mem-val">0%</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">DASD I/O</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill io-bar" style="width: 0%"></div>
+                        </div>
+                        <span class="health-value io-val">0%</span>
+                    </div>
+                    <div class="health-item">
+                        <span class="health-label">Spool Usage</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill spool-bar" style="width: 0%"></div>
+                        </div>
+                        <span class="health-value spool-val">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Batch Jobs Status -->
+            <div class="dash-card jobs-card">
+                <div class="dash-card-header">
+                    <h4><i class="fas fa-tasks"></i> Batch Jobs Status</h4>
+                    <span class="live-indicator"><span class="pulse"></span> LIVE</span>
+                </div>
+                <div class="jobs-summary">
+                    <div class="job-stat">
+                        <span class="job-count running-count">0</span>
+                        <span class="job-label">Running</span>
+                    </div>
+                    <div class="job-stat">
+                        <span class="job-count completed-count">0</span>
+                        <span class="job-label">Completed</span>
+                    </div>
+                    <div class="job-stat">
+                        <span class="job-count waiting-count">0</span>
+                        <span class="job-label">Waiting</span>
+                    </div>
+                    <div class="job-stat alert">
+                        <span class="job-count abended-count">0</span>
+                        <span class="job-label">Abended</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Insights -->
+            <div class="dash-card ai-card">
+                <div class="dash-card-header">
+                    <h4><i class="fas fa-robot"></i> AI Insights</h4>
+                    <span class="ai-badge">ML Engine Active</span>
+                </div>
+                <div class="ai-insights-list" id="aiInsights">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Active Job Stream -->
+            <div class="dash-card stream-card">
+                <div class="dash-card-header">
+                    <h4><i class="fas fa-stream"></i> Active Job Stream</h4>
+                </div>
+                <div class="job-stream" id="jobStream">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Console Messages -->
+            <div class="dash-card console-card">
+                <div class="dash-card-header">
+                    <h4><i class="fas fa-terminal"></i> Console Feed</h4>
+                    <span class="msg-count" id="msgCount">0 msgs</span>
+                </div>
+                <div class="console-output" id="consoleOutput">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- SLA Tracker -->
+            <div class="dash-card sla-card">
+                <div class="dash-card-header">
+                    <h4><i class="fas fa-flag-checkered"></i> SLA Tracker</h4>
+                </div>
+                <div class="sla-items" id="slaTracker">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Architecture Section -->
+<section class="architecture" id="architecture">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-project-diagram"></i> Architecture</span>
+            <h2>System Architecture</h2>
+            <p>How BatchOps AI Monitoring integrates with your mainframe ecosystem</p>
+        </div>
+        <div class="arch-diagram">
+            <div class="arch-layer" id="mainframe-layer">
+                <h3><i class="fas fa-server"></i> Mainframe Layer (z/OS)</h3>
+                <div class="arch-components">
+                    <div class="arch-comp">JES2/JES3</div>
+                    <div class="arch-comp">Control-M Agent</div>
+                    <div class="arch-comp">ESP Agent</div>
+                    <div class="arch-comp">SMF Records</div>
+                    <div class="arch-comp">SYSLOG / OPERLOG</div>
+                    <div class="arch-comp">RMF Monitor</div>
+                </div>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i> Data Collection (FTP/MQ/API)</div>
+            <div class="arch-layer" id="ingestion-layer">
+                <h3><i class="fas fa-database"></i> Data Ingestion Layer</h3>
+                <div class="arch-components">
+                    <div class="arch-comp">Apache Kafka</div>
+                    <div class="arch-comp">SMF Parser</div>
+                    <div class="arch-comp">Log Aggregator</div>
+                    <div class="arch-comp">Metric Collector</div>
+                </div>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i> Stream Processing</div>
+            <div class="arch-layer" id="ai-layer">
+                <h3><i class="fas fa-brain"></i> AI / ML Engine</h3>
+                <div class="arch-components">
+                    <div class="arch-comp highlight-comp">Anomaly Detection</div>
+                    <div class="arch-comp highlight-comp">Predictive Models</div>
+                    <div class="arch-comp highlight-comp">NLP (Console Msgs)</div>
+                    <div class="arch-comp highlight-comp">Pattern Recognition</div>
+                </div>
+            </div>
+            <div class="arch-arrow"><i class="fas fa-arrow-down"></i> Insights & Actions</div>
+            <div class="arch-layer" id="presentation-layer">
+                <h3><i class="fas fa-desktop"></i> Presentation Layer</h3>
+                <div class="arch-components">
+                    <div class="arch-comp">Real-Time Dashboard</div>
+                    <div class="arch-comp">Alert Management</div>
+                    <div class="arch-comp">Reporting Engine</div>
+                    <div class="arch-comp">API Gateway</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="usecases" id="usecases">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-lightbulb"></i> Use Cases</span>
+            <h2>Real-World Applications</h2>
+            <p>How AI transforms mainframe batch operations</p>
+        </div>
+        <div class="usecase-grid">
+            <div class="usecase-card">
+                <div class="usecase-number">01</div>
+                <h3>Batch Window Optimization</h3>
+                <p>AI analyzes historical execution patterns to recommend optimal job sequencing, reducing overall batch window duration by up to 30%.</p>
+                <div class="usecase-tech">
+                    <span>Control-M</span><span>ESP</span><span>ML Scheduling</span>
+                </div>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-number">02</div>
+                <h3>Proactive Abend Prevention</h3>
+                <p>Predictive models identify jobs likely to fail based on system conditions, resource contention, and historical abend patterns.</p>
+                <div class="usecase-tech">
+                    <span>SMF Type 30</span><span>LSTM Models</span><span>z/OS Metrics</span>
+                </div>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-number">03</div>
+                <h3>Automated RCA</h3>
+                <p>When abends occur, AI correlates console messages, job logs, and system events to generate preliminary Root Cause Analysis reports.</p>
+                <div class="usecase-tech">
+                    <span>NLP</span><span>SYSLOG</span><span>Knowledge Graph</span>
+                </div>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-number">04</div>
+                <h3>ESP to Control-M Migration</h3>
+                <p>AI-assisted analysis of ESP schedules for automated conversion to Control-M SaaS, with dependency validation and testing recommendations.</p>
+                <div class="usecase-tech">
+                    <span>ESP Parser</span><span>Control-M API</span><span>Validation</span>
+                </div>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-number">05</div>
+                <h3>IPL Health Verification</h3>
+                <p>Automated pre/post IPL checks comparing started tasks, address spaces, and system parameters with AI-driven drift detection.</p>
+                <div class="usecase-tech">
+                    <span>REXX</span><span>SDSF API</span><span>Drift Analysis</span>
+                </div>
+            </div>
+            <div class="usecase-card">
+                <div class="usecase-number">06</div>
+                <h3>Shift Handover Intelligence</h3>
+                <p>AI generates intelligent shift handover reports summarizing key events, pending actions, and risk areas for the incoming operations team.</p>
+                <div class="usecase-tech">
+                    <span>GenAI</span><span>Ops Log</span><span>Summarization</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Documentation Section -->
+<section class="docs" id="docs">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag"><i class="fas fa-book-open"></i> Resources</span>
+            <h2>Documentation</h2>
+            <p>Get started with BatchOps AI Monitoring</p>
+        </div>
+        <div class="docs-grid">
+            <a href="docs/setup-guide.md" class="doc-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Quick Start Guide</h3>
+                <p>Set up your first monitoring pipeline in under 30 minutes</p>
+            </a>
+            <a href="docs/architecture.md" class="doc-card">
+                <i class="fas fa-sitemap"></i>
+                <h3>Architecture Guide</h3>
+                <p>Deep dive into system components and data flow</p>
+            </a>
+            <a href="docs/api-reference.md" class="doc-card">
+                <i class="fas fa-code"></i>
+                <h3>API Reference</h3>
+                <p>REST API endpoints for integration and automation</p>
+            </a>
+            <a href="#" class="doc-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>AI Model Training</h3>
+                <p>How to train and tune models for your environment</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><i class="fas fa-microchip"></i> BatchOps<span class="highlight">AI</span></h3>
+                <p>AI-powered monitoring for enterprise mainframe batch operations. Built by mainframe engineers, for mainframe engineers.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#features">Features</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#docs">Documentation</a>
+            </div>
+            <div class="footer-links">
+                <h4>Technology</h4>
+                <a href="#">z/OS Integration</a>
+                <a href="#">Control-M SaaS</a>
+                <a href="#">ESP Workload Automation</a>
+                <a href="#">Python ML Pipeline</a>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mainframe BatchOps AI Monitoring. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
